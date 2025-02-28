@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: magnific_chaos;
+    src: url(assets/font/magnific_chaos/Magnific\ Chaos\ Personal\ Use.ttf) format(truetype);
+}
+
+
+
+body{
+    background-image: url(assets/webBg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
