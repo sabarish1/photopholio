@@ -1,6 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Bungee);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 .maindiv{
 display: flex;
-    margin-top: 3vh;
+
 }
 .page1{
     display: grid;
@@ -9,14 +18,37 @@ display: flex;
         grid-template-columns: 50% 50%;
 }
 .leftsidePage1{
-    background-color: aqua;
-    height: 90vh;
+    
+    height: 80vh;
     width: 48vw;
     margin-top: 15vh;
 }
+.welcome{
+    font-family: 'Sigmar One';
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20%;
+    font-size: 17vh;
+    color: #f32002;
+}
+.welmessage{
+    font-family: 'Lobster';
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3vh;
+    color: #7cadb1;
+}
 .leftsidePage2{
-background-color: aquamarine;
-height: 90vh;
+
+height: 80vh;
 width: 48vw;
 margin-top: 15vh;
 }
@@ -26,3 +58,108 @@ margin-top: 15vh;
         height: 95vh;
         grid-template-columns: 50% 50%;
 }
+.page3{
+    margin-top: 15vh;
+        width: 100%;
+        height: 95vh;
+        color: whitesmoke;
+}
+.heading{
+    color: beige;
+    width: 100%;
+    font-family: 'Bungee';
+    font-size: 6vh;
+    margin: -12px 0px;
+}
+.glassContainer{
+    width: 95%;
+    height: 4vh;
+    background: rgba(255, 255, 255, 0.1);  /* White with some transparency */
+    backdrop-filter: blur(10px);  /* Applies the blur effect */
+    border-radius: 15px;  /* Optional, for rounded corners */
+    padding: 30px;  /* Optional padding */
+   position: fixed;
+   display: grid;
+   grid-template-columns: 42% 58%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Optional shadow for better visibility */
+    color: white;  /* Text color inside the glass */
+   
+}
+.navbar {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    font-family: 'Pacifico';
+    position: relative;
+   
+    width: 100%;
+    z-index: 1000;
+   
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 6px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+   
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #00bcd4;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .navbar a:hover {
+    color: #00bcd4;
+    transform: scale(1.1);
+  }
+
+  .navbar a:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+  /* Smooth slide-down effect for active navbar items */
+  .navbar a.active {
+    
+    padding: 15px 20px;
+    border-radius: 4px;
+  }
+
+  /* Adding animation */
+  .navbar a:nth-child(odd) {
+    animation: slideIn 0.5s ease-out 0.3s forwards;
+  }
+
+  .navbar a:nth-child(even) {
+    animation: slideIn 0.5s ease-out 0.5s forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Adding a hover effect to the navbar */
+  .navbar:hover {
+   
+    transition: background-color 0.3s ease;
+  }
